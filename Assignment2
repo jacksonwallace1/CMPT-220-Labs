@@ -1,0 +1,38 @@
+// Jackson Wallace
+// Computer Science
+
+import java.util.Scanner;
+
+public class Assignment2 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+        System.out.println("Question 1: What is the name of Darth Vader's flagship?");
+        String answer = sc.nextLine();
+        if (answer.equals("The Executor")){
+            System.out.println("Correct!");
+            score += 1;
+        }else{
+            System.out.println("Incorrect, the correct answer was The Executor.");
+        }
+        System.out.println("Question 2: What is Emporer Palpatine's sith name?");
+        answer = sc.nextLine();
+        if (answer.equals("Darth Sideous")){
+            System.out.println("Correct!");
+            score += 1;
+        }else{
+            System.out.println("Incorrect, the correct answer was Darth Sideous.");
+        }
+        System.out.println("Question 3: What is the name of the holographic board game that is played on the Millenium Falcon?");
+        answer = sc.nextLine();
+        if (answer.equals("Dejarik")){
+            System.out.println("Correct!");
+            score += 1;
+        }else{
+            System.out.println("Incorrect, the correct answer was Dejarik.");
+        }
+        System.out.println("You got " + score + "/3 correct!");
+    }
+}
+
+// I learned to properly implement if/else statements.
