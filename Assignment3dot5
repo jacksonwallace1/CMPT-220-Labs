@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+
+class Assignment3dot5 {
+    public static void main(String[] args) {
+
+        //A scanner and prints are used to collect tax information from the user
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your yearly salary");
+        int salary = sc.nextInt();
+        System.out.println("Enter your yearly expenses");
+        int expenses = sc.nextInt(); //Expenses is never used later in the code
+        System.out.println("Enter the amount of people in your household");
+        int people = sc.nextInt();
+
+        //A for loop is used to calculate additional tax reduction based
+        //on the number of people in the user's household
+        int additionalTaxReduction = 0;
+        for(int i = 0; i <= people; i++){
+            additionalTaxReduction += 2;
+        }
+
+        // If/else statements are used to calculate tax reduction based on the
+        // salary and household information inputted earlier
+        int taxReduction = 0;
+        taxReduction += additionalTaxReduction;
+        if(salary > 50000 && people > 3){
+            taxReduction += 10;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else if(salary > 30000 && people > 4){
+            taxReduction += 9;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else if(salary > 70000 && people > 2){
+            taxReduction += 5;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else {
+            System.out.println("No applicable reduction on taxes found.");
+        }
+
+        /*
+         * This program collects information from users in order 
+         * to calculate their tax reduction
+         */
+    }
+}
