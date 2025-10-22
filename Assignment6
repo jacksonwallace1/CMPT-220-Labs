@@ -1,0 +1,22 @@
+public class Assignment6 {
+    public static void main(String[] args){
+
+        student student1 = new student("John", "Freshman", 3.4, 0);
+        student student2 = new student("Jane", "Sophmore", 3.8, 1);
+        student student3 = new student("Steve", "Junior", 3.6, 2);
+        student student4 = new student("Adam", "Senior", 4.0, 3);
+        student student5 = new student("Mary", "Senior", 3.1, 4);
+
+        student1.isHonorRoll();
+        student2.isHonorRoll();
+        student3.isHonorRoll();
+        student4.isHonorRoll();
+        student5.isHonorRoll();
+
+        student1.freeLunch();
+        student2.freeLunch();
+        student3.freeLunch();
+        student4.freeLunch();
+        student5.freeLunch();
+    }
+}
