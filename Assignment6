@@ -20,3 +20,4 @@ public class Assignment6 {
         student5.freeLunch();
     }
 }
+//Learn the basics of creating and implementing classes across multiple files
