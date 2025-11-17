@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Assignment8 {
+    public static void main(String[] args){
+        List<String> list = new ArrayList<>();
+        File inputfile = new File("practice.txt");
+        try {
+            Scanner input = new Scanner(inputfile);
+            while(input.hasNext()){
+                list.add(input.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("There are " + list.size()/2 + " names in the file.");
+        for(int i = 1; i < list.size(); i=i+2){
+            if((int)list.get(i) > 3.5){
+                System.out.println(list.get(i-1) + " has a GPA over 3.5");
+            }
+        }
+    }
+}
